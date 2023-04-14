@@ -1,0 +1,98 @@
+##############################################################
+### get 
+GET http://127.0.0.1:8080/users HTTP/1.1
+
+### get 
+GET http://127.0.0.1:8080/user-subscriber HTTP/1.1
+
+### get 
+GET http://127.0.0.1:8080/user-channel HTTP/1.1
+
+### post 
+POST http://127.0.0.1:8080/users HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Bambang",
+    "email": "bambang@gmail.com",
+    "password" : "password"
+}
+
+### post 
+POST http://127.0.0.1:8080/add-subscriber HTTP/1.1
+content-type: application/json
+
+{
+    "user_id": 3,
+    "channel_id": 1
+}
+
+### edit 
+PUT http://127.0.0.1:8080/suppliers/12 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "PT. Layar Pertama",
+    "address": "Tuban"
+}
+
+### delete
+DELETE http://127.0.0.1:8080/suppliers/12 HTTP/1.1
+
+##############################################################
+### channel
+GET http://127.0.0.1:8080/channels/1 HTTP/1.1
+
+### get 
+GET http://127.0.0.1:8080/channels-user HTTP/1.1
+
+
+### get 
+GET http://127.0.0.1:8080/channels-video HTTP/1.1
+
+### post 
+POST http://127.0.0.1:8080/channels HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Adi Keren Channel",
+    "description": "Channel punya adi",
+    "user_id" : 1
+}
+
+### edit 
+PUT http://127.0.0.1:8080/suppliers/12 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "PT. Layar Pertama",
+    "address": "Tuban"
+}
+
+### delete supplier
+DELETE http://127.0.0.1:8080/suppliers/12 HTTP/1.1
+
+##############################################################
+### videos
+GET http://127.0.0.1:8080/videos/1 HTTP/1.1
+
+### get 
+GET http://127.0.0.1:8080/channels-user HTTP/1.1
+
+
+### get 
+GET http://127.0.0.1:8080/channels-video HTTP/1.1
+
+### post 
+POST http://127.0.0.1:8080/videos HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Video adi pertama",
+    "description": "Video adi",
+    "channel_id" : 1 
+}
+
+
+### delete supplier
+DELETE http://127.0.0.1:8080/suppliers/12 HTTP/1.1
